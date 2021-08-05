@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Car Guru</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="Css/generalCss.css" rel="stylesheet" type="text/css"/>
+    <link href='https://fonts.googleapis.com/css?family=Monoton' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet'>
+            <script>
+                function display() {
+                    var output = "";
+                    var price = parseInt(CarSelector.priceRange.value);
+                    var person = parseInt(CarSelector.numOfPerson.value);
+                    var type = parseInt(CarSelector.carType.value);
+
+                    if (type === 1 && person < 6 && price === 0 && CarSelector.engine.checked === false) {
+                        output += "Suggested car is VolksWagen Polo";
+                        output += "\n";
+                    } else if (price === 0 && person < 6 && type === 1 && CarSelector.engine.checked === true) {
+                        output += "Suggested car is Opel Corsa CDTI";
+                        output += "\n";
+                    } else if (price === 1 && person < 6 && type === 1 && CarSelector.engine.checked === false) {
+                        output += "Suggested car is Bmw 118i";
+                        output += "\n";
+                    } else if (price === 1 && person < 6 && type === 1 && CarSelector.engine.checked === true) {
+                        output += "Suggested car is Mercedes A200d";
+                        output += "\n";
+                    } else if (price === 0 && person < 6 && type === 0 && CarSelector.engine.checked === false) {
+                        output += "Suggested car is VolksWagen Jetta";
+                        output += "\n";
+                    } else if (price === 0 && person < 6 && type === 0 && CarSelector.engine.checked === true) {
+                        output += "Suggested car is Skoda Octavia TDI";
+                        output += "\n";
+                    } else if (price === 1 && person < 6 && type === 0 && CarSelector.engine.checked === false) {
+                        output += "Suggested car is Bmw 320i";
+                        output += "\n";
+                    } else if (price === 1 && person < 6 && type === 0 && CarSelector.engine.checked === true) {
+                        output += "Suggested car is Mercedes c200d";
+                        output += "\n";
+                    }
+
+                    CarSelector.panel.value = output;
+                }
+
+            </script>
+            <style>
+                html{
+                    height: 100%;
+                    overflow:hidden;
+                }
+                body{
+                    background-color: rgb(0, 34, 46);
+                    color:#a87064;
+                    perspective: 1px;
+                    height: 100%;
+                    overflow-y: scroll;
+                    overflow-x: hidden;
+                }
+                header {
+                    font-family: 'Orbitron';font-size: 22px;
+                    box-sizing: border-box;
+                    min-height: 100vh;
+                    padding:30vw 0 5vw;
+                    position: relative;
+                    transform-style: inherit;
+                    width: 100vw;
+                }
+                header h1{
+
+                    font-family: 'Monoton';
+                    font-size: 35pt;
+                    color:#bf1818;
+                    letter-spacing: 0.2em;
+                    margin-top:-100px;
+                }
+                header h1+ p{
+                    margin: 0px auto;
+                    width: 800px;
+                    color:#fff;
+                }
+                header, header:before{
+                    background: 50% 50% / cover;
+                }
+                header::before{
+                    bottom:0;
+                    content: "";
+                    left:0;
+                    position: absolute;
+                    right: 0;
+                    top:0;
+                    display: block;
+                    background-image: url(images/background-black-clouds-696680.jpg);
+                    background-size:cover;
+                    transform-origin: center center 0;
+                    transform: translateZ(-1px) scale(2);
+                    z-index: -1;
+                    min-height: 100vh;
+                }
+                header *{
+                    font-weight: normal;
+                    text-align: center;
+                    margin:0;
+                    padding: 1em 0;
+                }
+                table{
+
+                    width: 400px;
+                    font-family: 'Orbitron';
+                    background-color: #ff994d;
+                    border-radius: 10px;
+                    color:#fff;
+                    position: relative;
+                    margin-top:50px;
+                    margin-left:auto;
+                    margin-right: auto;
+
+                }
+                table tr{
+
+                    text-align: center;
+                }
+                table td{
+                    padding:5px;
+                }
+                h3{
+                    margin-top: 450px;
+                    text-align: center;
+                    font-family: 'Monoton';
+                    font-size: 18pt;
+                }
+                textArea{
+
+                    background-color: #174453;
+                    color: #fffb5c;
+
+                }
+                #selBtn{
+                    width: 200px;
+                    text-align: center;
+                    font-family: 'Orbitron';
+                    background-color: #bf1818;
+                    color:#fff;
+                }
+
+            </style>
+
+            </head>
+            <body>
+            <div id="header-wrapper">  
+                <div id="header">
+                    <h1>CarGuru</h1>
+                    <div id="menu">
+                        <ul>
+                            <li><a href="index.html">Homepage</a></li>
+                            <li><a href="game_page.html">GamePage</a></li>
+                             <li><a href="new_game.html">SecondGame</a></li> 
+                            <li><a href="FlipCard_page.html">FlipCards</a></li>    
+                            <li><a href="Contact.html">Contact</a></li>         
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <header>
+
+                <h1>HISTORY OF CARS</h1>
+                <p>A car (or automobile) is a wheeled motor vehicle used for transportation. 
+                    Most definitions of car say they run primarily on roads, seat one to eight people, have four tires, 
+                    and mainly transport people rather than goods.<br><br>               
+                    Cars came into global use during the 20th century, and developed economies depend on them.
+                    The year 1886 is regarded as the birth year of the modern car when German inventor Karl Benz patented his Benz Patent-Motorwagen.
+                    Cars became widely available in the early 20th century. 
+                    One of the first cars accessible to the masses was the 1908 Model T, an American car manufactured by the Ford Motor Company. 
+                </p>
+
+            </header>
+
+            <div id="middle">
+                <h3>CAR SELECTOR FORM</h3>
+                <form name="CarSelector">
+                    <table>
+                        <tr>
+                            <td>Car Type</td>
+                            <td><select name="carType">
+                                    <option value="0">Sedan</option>
+                                    <option value="1">Hatchback</option>
+                                </select></td>
+                        </tr>
+                        <tr>
+                            <td>Number of Person</td>
+                            <td><input type="text" name="numOfPerson" value="4" size="7"></td>
+                            </tr>
+                            <tr>
+                                <td>Engine Type</td>
+                                <td><input type="checkbox" name="engine">Diesel</td> 
+                                </tr>
+                                <tr>
+                                    <td>Price Range</td>
+                                    <td><select name="priceRange">
+                                            <option value="0">$5.000-$10.000</option>
+                                            <option value="1">$10.000-$30.000</option>
+                                        </select></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <textarea id="txtArea" name="panel" rows="10" cols="40"></textarea>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                <input id="selBtn" type="button" value="Suggest a Car for Me" onclick="display()"/>
+                                </td>
+                                </tr>
+                                </table>
+                                <br><br><br>
+                                </form>
+
+
+
+                                </div>    
+                                </body>
+                                </html>
